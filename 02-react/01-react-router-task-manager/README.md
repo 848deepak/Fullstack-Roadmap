@@ -1,16 +1,31 @@
-# React + Vite
+# React Router Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This project demonstrates routing + hooks + local persistence in a clean task-management application.
 
-Currently, two official plugins are available:
+## What You Learn
+- Client-side routing with React Router
+- Reusable component design
+- Form handling and list rendering
+- Local state + localStorage persistence
+- Accessibility basics in form and list interactions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Core Files
+- `src/App.jsx` — app layout, routes, and main UI flow
+- `src/main.jsx` — app entry point
+- `src/App.css` — UI styling
+- `ROUTING_COVERAGE.md` — dynamic/nested/protected/404 route guidance
 
-## React Compiler
+## Run
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Suggested Enhancements
+1. Add dynamic route (`/tasks/:id`).
+2. Add protected route wrapper.
+3. Add custom 404 screen for unknown routes.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Expected Outcome
+You should be comfortable building route-driven React mini apps with practical state and UX patterns.
