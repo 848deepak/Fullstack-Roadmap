@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskManager Snapshot Tests should match snapshot for TaskManager component structure 1`] = `
+<div
+  class="task-manager"
+>
+  <h1>
+    Task Manager
+  </h1>
+  <div
+    class="input-section"
+  >
+    <input
+      class="task-input"
+      data-testid="task-input"
+      placeholder="Add a new task..."
+      type="text"
+      value=""
+    />
+    <button
+      class="add-button"
+      data-testid="add-button"
+    >
+      Add
+    </button>
+  </div>
+  <div
+    class="search-section"
+  >
+    <input
+      class="search-input"
+      data-testid="search-input"
+      placeholder="Search tasks..."
+      type="text"
+      value=""
+    />
+    <button
+      class="search-button"
+      data-testid="search-button"
+    >
+      Search
+    </button>
+  </div>
+  <div
+    class="task-stats"
+  >
+    <p>
+      Total Tasks: 
+      0
+    </p>
+    <p>
+      Filtered Tasks: 
+      0
+    </p>
+  </div>
+  <div
+    class="task-list"
+  >
+    <p
+      class="no-tasks"
+    >
+      No tasks found
+    </p>
+  </div>
+</div>
+`;
+
+exports[`TaskManager Snapshot Tests should match snapshot for initial render 1`] = `
+<div
+  class="task-manager"
+>
+  <h1>
+    Task Manager
+  </h1>
+  <div
+    class="input-section"
+  >
+    <input
+      class="task-input"
+      data-testid="task-input"
+      placeholder="Add a new task..."
+      type="text"
+      value=""
+    />
+    <button
+      class="add-button"
+      data-testid="add-button"
+    >
+      Add
+    </button>
+  </div>
+  <div
+    class="search-section"
+  >
+    <input
+      class="search-input"
+      data-testid="search-input"
+      placeholder="Search tasks..."
+      type="text"
+      value=""
+    />
+    <button
+      class="search-button"
+      data-testid="search-button"
+    >
+      Search
+    </button>
+  </div>
+  <div
+    class="task-stats"
+  >
+    <p>
+      Total Tasks: 
+      0
+    </p>
+    <p>
+      Filtered Tasks: 
+      0
+    </p>
+  </div>
+  <div
+    class="task-list"
+  >
+    <p
+      class="no-tasks"
+    >
+      No tasks found
+    </p>
+  </div>
+</div>
+`;
+
+exports[`TaskManager Snapshot Tests should match snapshot for search section 1`] = `
+<div
+  class="search-section"
+>
+  <input
+    class="search-input"
+    data-testid="search-input"
+    placeholder="Search tasks..."
+    type="text"
+    value=""
+  />
+  <button
+    class="search-button"
+    data-testid="search-button"
+  >
+    Search
+  </button>
+</div>
+`;
+
+exports[`TaskManager Snapshot Tests should match snapshot for task input section 1`] = `
+<div
+  class="input-section"
+>
+  <input
+    class="task-input"
+    data-testid="task-input"
+    placeholder="Add a new task..."
+    type="text"
+    value=""
+  />
+  <button
+    class="add-button"
+    data-testid="add-button"
+  >
+    Add
+  </button>
+</div>
+`;
+
+exports[`TaskManager Snapshot Tests should match snapshot for task stats section 1`] = `
+<div
+  class="task-stats"
+>
+  <p>
+    Total Tasks: 
+    0
+  </p>
+  <p>
+    Filtered Tasks: 
+    0
+  </p>
+</div>
+`;
+
+exports[`TaskManager Snapshot Tests should match snapshot with no tasks 1`] = `
+<p
+  class="no-tasks"
+>
+  No tasks found
+</p>
+`;

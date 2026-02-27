@@ -1,0 +1,332 @@
+:root {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --text: #101828;
+  --muted: #667085;
+  --primary: #6c5ce7;
+  --primary-dark: #5b4bd6;
+  --danger: #d92d20;
+  --border: #eaecf0;
+  --shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b0f1a;
+  --card: #161b26;
+  --text: #f4f5f7;
+  --muted: #98a2b3;
+  --primary: #8f7bff;
+  --primary-dark: #6f5bff;
+  --danger: #f97066;
+  --border: #1f2937;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  min-height: 100vh;
+  padding: 48px clamp(24px, 5vw, 96px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: var(--shadow);
+}
+
+.theme-label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 500;
+}
+
+input {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  background: transparent;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+.error {
+  color: var(--danger);
+  margin: 6px 0 0;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.status-block {
+  display: grid;
+  gap: 4px;
+}
+
+.session-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  background: #98a2b3;
+}
+
+.dot.online {
+  background: #12b76a;
+}
+
+.dot.offline {
+  background: #f04438;
+}
+
+.list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.nested {
+  background: rgba(0, 0, 0, 0.02);
+  border-left: 4px solid var(--primary);
+}
+
+:root[data-theme="dark"] .nested {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.prop-display {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  margin: 12px 0;
+}
+
+.highlight {
+  background: var(--primary);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #cbd5e1;
+  transition: 0.2s;
+  border-radius: 999px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background: var(--primary);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.drilling-wrapper {
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.drilling-title {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.drilling-info {
+  color: var(--muted);
+  margin: 0 0 20px;
+  font-size: 14px;
+}
+
+.drilling-container {
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+.parent-box {
+  border-color: #3b82f6;
+}
+
+.child-box {
+  border-color: #10b981;
+  margin: 16px 0 0 0;
+}
+
+.grandchild-box {
+  border-color: #ef4444;
+  margin: 16px 0 0 0;
+}
+
+.level-label {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.level-text {
+  color: var(--muted);
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.final-message {
+  color: #ef4444;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+
+.prop-display {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 0;
+}
+
+.prop-display p {
+  margin: 6px 0;
+  font-size: 14px;
+}
