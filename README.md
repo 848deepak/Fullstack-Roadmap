@@ -84,6 +84,17 @@ fullstack/
 - JavaScript track: open [01-javascript/README.md](01-javascript/README.md)
 - React track: open [02-react/README.md](02-react/README.md)
 
+## Quick Navigation
+
+- 🧭 **Start**: [00-start-here-glossary.md](00-start-here-glossary.md)
+- 📘 **All 00 References**: [00-reference-index.md](00-reference-index.md)
+- 🟨 **JavaScript Roadmap**: [01-javascript/README.md](01-javascript/README.md)
+- ⚛️ **React Roadmap**: [02-react/README.md](02-react/README.md)
+- 🧪 **Testing Track**: [02-react/12-testing-guide](02-react/12-testing-guide)
+- 🚀 **Production Skills**: [02-react/16-production-level-skills](02-react/16-production-level-skills)
+- 🏆 **Bonus Industry Skills**: [03-bonus-industry-skills](03-bonus-industry-skills)
+- ✅ **Coverage Matrix**: [TOPIC_COVERAGE_MATRIX.md](TOPIC_COVERAGE_MATRIX.md)
+
 ## Complete Topic Coverage
 
 ### JavaScript (Basic to Advanced)
