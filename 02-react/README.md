@@ -5,6 +5,7 @@ This module contains foundational topics plus mini-projects arranged from beginn
 ## Before You Start (00)
 
 - [00-react-keywords-hooks-reference](00-react-keywords-hooks-reference.md)
+- Each major module also includes a local `00-reference.md` for quick revision.
 
 ## Learning Goal
 

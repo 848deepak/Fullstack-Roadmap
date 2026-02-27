@@ -5,6 +5,7 @@ This module covers JavaScript from basics to project-level implementation.
 ## Before You Start (00)
 
 - [00-javascript-keywords-reference](00-javascript-keywords-reference.md)
+- Each major module also includes a local `00-reference.md` for quick revision.
 
 ## Learning Goal
 
