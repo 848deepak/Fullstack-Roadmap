@@ -74,6 +74,9 @@ fullstack/
 
 ## Start Here
 
+- Foundation glossary: [00-start-here-glossary.md](00-start-here-glossary.md)
+- JavaScript definitions: [01-javascript/00-javascript-keywords-reference.md](01-javascript/00-javascript-keywords-reference.md)
+- React definitions/hooks: [02-react/00-react-keywords-hooks-reference.md](02-react/00-react-keywords-hooks-reference.md)
 - New learners: open [LEARNING_PATH.md](LEARNING_PATH.md)
 - Topic-by-topic proof: open [TOPIC_COVERAGE_MATRIX.md](TOPIC_COVERAGE_MATRIX.md)
 - JavaScript track: open [01-javascript/README.md](01-javascript/README.md)

@@ -1,5 +1,11 @@
 # Learning Path (Beginner → Advanced)
 
+## Start with 00 References
+
+- [00-start-here-glossary](00-start-here-glossary.md)
+- [JavaScript 00 reference](01-javascript/00-javascript-keywords-reference.md)
+- [React 00 reference](02-react/00-react-keywords-hooks-reference.md)
+
 ## Stage 1: JavaScript Foundations
 
 ### Modules + Project

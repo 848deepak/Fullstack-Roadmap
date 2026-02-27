@@ -2,6 +2,10 @@
 
 This module covers JavaScript from basics to project-level implementation.
 
+## Before You Start (00)
+
+- [00-javascript-keywords-reference](00-javascript-keywords-reference.md)
+
 ## Learning Goal
 
 Understand JavaScript deeply enough to build real web apps and crack interview-level fundamentals.

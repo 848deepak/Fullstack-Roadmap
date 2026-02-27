@@ -2,6 +2,10 @@
 
 This module contains foundational topics plus mini-projects arranged from beginner to advanced.
 
+## Before You Start (00)
+
+- [00-react-keywords-hooks-reference](00-react-keywords-hooks-reference.md)
+
 ## Learning Goal
 
 Build production-ready React skills: architecture, state, performance, testing, and deployment.
