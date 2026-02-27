@@ -6,6 +6,11 @@ Use this folder to add and organize practical vanilla JavaScript projects that a
 ## Included project
 - [Product Filter Dashboard](../01-product-filter-dashboard)
 
+## What You Learn
+- Applying fundamentals to real use-cases
+- Building UI behavior with clean JS logic
+- Structuring mini projects for portfolio presentation
+
 ## Suggested Additions
 - Weather app (Fetch API + loading/error states)
 - Expense tracker (localStorage persistence)

@@ -19,5 +19,10 @@ This section helps you revise core-to-advanced concepts for interviews and techn
 - Array/object transformations
 - Time/space complexity analysis
 
+## What You Learn
+- How to explain JavaScript internals clearly
+- How to reason about trade-offs and edge cases
+- How to answer concept + practical interview questions
+
 ## Expected Outcome
 You should confidently explain JavaScript internals and solve practical coding tasks.

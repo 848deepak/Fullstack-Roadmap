@@ -23,3 +23,13 @@ Thank you for contributing to this learning repository.
 - Prefer readable code over clever shortcuts
 - Add learning-friendly comments for non-obvious logic
 - Keep files small and focused
+
+## Documentation consistency check
+
+Before opening a PR, run:
+
+```bash
+node scripts/validate-readmes.js
+```
+
+This verifies that targeted module README files keep required structure headings.
