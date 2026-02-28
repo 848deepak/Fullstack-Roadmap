@@ -1,0 +1,168 @@
+/* 
+   PRODUCTION CSS: A robust CSS reset and modern layout implementation using CSS Grid and Flexbox.
+*/
+
+/* 1. THE BOX-SIZING RESET 
+   Crucial for sane layouts. Ensures that padding and borders are included in the element's total width/height.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. BASE TYPOGRAPHY & RESET */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    background-color: #f8fafc; /* Tailwind Slate 50 */
+    color: #0f172a;            /* Tailwind Slate 900 */
+}
+
+/* 3. CSS VARIABLES (Custom Properties)
+   Used for dynamic theming (like Dark Mode) and maintaining a single source of truth.
+*/
+:root {
+    --primary: #3b82f6; /* Blue 500 */
+    --primary-hover: #2563eb;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* 4. THE 12-COLUMN CSS GRID SYSTEM 
+   A responsive wrapper that caps the width on large screens and adds padding on small ones.
+*/
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    
+    /* Display Grid */
+    display: grid;
+    /* Create 12 equal fluid columns */
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing-lg);
+}
+
+/* 5. HEADER COMPONENT (Using Flexbox) */
+.header {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+.header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    
+    /* Flexbox for vertical alignment and horizontal distribution */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav ul {
+    list-style: none; /* remove bullet points */
+    display: flex;
+    gap: var(--spacing-lg);
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: color 0.2s ease; /* Cheap and smooth GPU transition */
+}
+
+.header__nav a:hover {
+    color: var(--primary);
+}
+
+/* 6. MAIN CONTENT COLUMNS (CSS Grid layout spanning) */
+.main-content {
+    /* Spans 8 columns out of 12 */
+    grid-column: span 8;
+}
+
+.sidebar {
+    /* Spans the remaining 4 columns */
+    grid-column: span 4;
+}
+
+/* 7. CARD COMPONENT (Using BEM methodology: Block__Element--Modifier) */
+.card {
+    background-color: var(--surface);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--spacing-lg);
+}
+
+.card__title {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    /* aspect-ratio ensures no layout shifts (CLS) while image loads */
+    aspect-ratio: 16 / 9;
+    object-fit: cover; 
+}
+
+/* 8. BUTTON COMPONENT */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn:active {
+    /* Micro-interaction: button pushes down slightly */
+    transform: scale(0.98);
+}
+
+/* 9. RESPONSIVE DESIGN (Media Queries) 
+   Desktop-first approach (shrinking down for mobile).
+   Note: Modern apps prefer a Mobile-First approach (`min-width`).
+*/
+@media (max-width: 768px) {
+    .container {
+        /* On screens smaller than 768px, change grid to a single column */
+        grid-template-columns: 1fr;
+    }
+    
+    .main-content, .sidebar {
+        /* Both now span the entire single column */
+        grid-column: span 1;
+    }
+
+    .header__inner {
+        /* Stack nav links vertically on mobile */
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}

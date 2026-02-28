@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A demonstration of production-grade semantic HTML5 layout">
+    <title>Semantic HTML5 Layout</title>
+
+    <!-- Example of Resource Hints (Preloading critical assets to avoid blocked rendering) -->
+    <!-- <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin> -->
+</head>
+<body>
+
+    <!-- 1. HEADER: The top section of the page, usually containing branding and global navigation -->
+    <header>
+        <!-- The primary logo or branding. Only one H1 per page is best practice for SEO. -->
+        <h1>Modern Tech Blog</h1>
+        
+        <!-- NAV: Defines a block of navigation links. -->
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. MAIN: Represents the dominant content of the page. Helps screen readers skip headers/footers -->
+    <main>
+
+        <!-- SECTION: A thematic grouping of content, typically with a heading. -->
+        <section id="articles">
+            <h2>Latest Posts</h2>
+            
+            <!-- ARTICLE: A self-contained composition that could be syndicated independently (e.g., a blog post, news story) -->
+            <article>
+                <!-- header INSIDE an article contains the metadata for that specific piece of content -->
+                <header>
+                    <h3>Understanding the DOM</h3>
+                    <!-- time: Machine-readable datetime representation -->
+                    <p>Published on <time datetime="2024-10-12">October 12, 2024</time> by Jane Doe</p>
+                </header>
+
+                <!-- Example of an accessible image using 'alt' and 'loading="lazy"' for performance -->
+                <figure>
+                    <img src="https://via.placeholder.com/600x300" 
+                         alt="Diagram showing the Document Object Model tree structure"
+                         loading="lazy"
+                         width="600" height="300">
+                    <figcaption>Figure 1: The DOM Tree constructed by the browser.</figcaption>
+                </figure>
+                
+                <p>The <strong>Document Object Model</strong> is an interface that treats an HTML or XML document as a tree structure wherein each node is an object representing a part of the document.</p>
+                
+                <a href="/post/1" aria-label="Read full article on Understanding the DOM">Continue Reading...</a>
+            </article>
+
+        </section>
+
+        <!-- ASIDE: Content that is tangentially related to the content around it (e.g., sidebars, callouts) -->
+        <aside>
+            <h3>Subscribe to Newsletter</h3>
+            <!-- FORM: Example of accessible forms using explicit label connections -->
+            <form action="/api/subscribe" method="POST">
+                <div>
+                    <!-- The 'for' attribute strictly ties this label to the input with the matching 'id' -->
+                    <label for="emailInput">Email Address:</label>
+                    <input type="email" id="emailInput" name="email" required placeholder="you@company.com">
+                </div>
+                <button type="submit">Subscribe</button>
+            </form>
+        </aside>
+
+    </main>
+
+    <!-- 3. FOOTER: Represents the footer of its nearest ancestor. Here, it is the global page footer. -->
+    <footer>
+        <p>&copy; 2024 Modern Tech Blog. All rights reserved.</p>
+        <address>
+            <!-- ADDRESS: Used for contact information for the nearest article or body ancestor -->
+            Contact us at <a href="mailto:hello@techblog.com">hello@techblog.com</a>
+        </address>
+    </footer>
+
+</body>
+</html>
