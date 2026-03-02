@@ -1,0 +1,50 @@
+/* Beginner: reusable utility and component classes reduce duplication. */
+/* Advanced: layered architecture helps scale CSS in large codebases. */
+
+@layer reset, tokens, utilities, components;
+
+@layer tokens {
+  :root {
+    --space-2: 0.5rem;
+    --space-4: 1rem;
+    --radius-md: 0.75rem;
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text: #0f172a;
+    --color-primary: #2563eb;
+  }
+}
+
+@layer utilities {
+  .u-stack > * + * {
+    margin-top: var(--space-4);
+  }
+
+  .u-container {
+    width: min(100% - 2rem, 1100px);
+    margin-inline: auto;
+  }
+}
+
+@layer components {
+  .c-card {
+    background: var(--color-surface);
+    color: var(--color-text);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  }
+
+  .c-button {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.625rem 0.875rem;
+  }
+
+  .c-button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

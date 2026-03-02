@@ -1,0 +1,31 @@
+/* Beginner: animate transform and opacity for smooth transitions. */
+/* Advanced: avoid animating layout properties (width/height/top/left) to prevent reflow jank. */
+
+.card {
+  width: 240px;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(2, 6, 23, 0.12);
+  transition: transform 220ms ease, opacity 220ms ease;
+  will-change: transform, opacity;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-6px) scale(1.01);
+  opacity: 0.98;
+}
+
+/* Edge case: respect reduced motion preference for accessibility. */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: none;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,11 @@
+groups:
+  - name: api-alerts
+    rules:
+      - alert: HighApiErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.05
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API 5xx error rate"
+          description: "Error ratio stayed above threshold for 10 minutes."

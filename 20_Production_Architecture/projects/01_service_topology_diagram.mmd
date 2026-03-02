@@ -1,0 +1,8 @@
+flowchart LR
+  Client --> Gateway
+  Gateway --> OrderAPI
+  Gateway --> CatalogAPI
+  OrderAPI --> Postgres
+  OrderAPI --> Redis
+  OrderAPI --> PaymentService
+  CatalogAPI --> SearchService

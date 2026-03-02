@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Accessibility Patterns</title>
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+        background: #fff;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Beginner: skip link helps keyboard users jump to main content. -->
+    <!-- Advanced: this pattern is essential for WCAG keyboard navigation compliance. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+      <h1>Accessible Dashboard</h1>
+      <nav aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#reports">Reports</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="overview" aria-labelledby="overview-title">
+        <h2 id="overview-title">Overview</h2>
+        <p>Semantic structure with keyboard-first interactions.</p>
+      </section>
+
+      <section id="reports" aria-labelledby="reports-title">
+        <h2 id="reports-title">Reports</h2>
+        <button aria-describedby="report-help">Generate report</button>
+        <p id="report-help">Generates CSV and notifies status below.</p>
+      </section>
+
+      <!-- Edge case: screen reader users receive async updates via live region. -->
+      <div role="status" aria-live="polite">No pending notifications.</div>
+    </main>
+  </body>
+</html>

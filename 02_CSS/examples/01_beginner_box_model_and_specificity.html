@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model and Specificity</title>
+    <style>
+      /* Beginner: border-box makes sizing predictable with padding and borders included. */
+      /* Advanced: globally setting border-box prevents layout drift in large component systems. */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      .card {
+        width: 320px;
+        padding: 16px;
+        border: 2px solid #0f172a;
+        margin: 16px;
+        background: #f8fafc;
+      }
+
+      p {
+        color: #1e293b;
+      }
+
+      .highlight {
+        color: #2563eb;
+      }
+
+      #priority-text {
+        color: #0f766e;
+      }
+
+      /* Beginner: id selector has higher specificity than class and element selectors. */
+      /* Advanced: avoid overusing IDs in scalable CSS architecture. */
+    </style>
+  </head>
+  <body>
+    <article class="card">
+      <h1>Box Model Demo</h1>
+      <p>This paragraph uses element selector style.</p>
+      <p class="highlight">This paragraph uses class selector style.</p>
+      <p id="priority-text" class="highlight">This paragraph uses id selector style.</p>
+    </article>
+  </body>
+</html>

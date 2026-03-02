@@ -1,182 +1,243 @@
-# Full Stack Learning Hub (JavaScript to React)
+# Full-Stack Web Development Learning Repository (Beginner → Production)
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-Basic_to_Advanced-F7DF1E?logo=javascript&logoColor=black)](01-javascript/README.md)
-[![React](https://img.shields.io/badge/React-Basic_to_Production-61DAFB?logo=react&logoColor=black)](02-react/README.md)
-[![Coverage Matrix](https://img.shields.io/badge/Coverage-Topic_Matrix-success)](TOPIC_COVERAGE_MATRIX.md)
-[![Learning Path](https://img.shields.io/badge/Learning-Structured_Path-blue)](LEARNING_PATH.md)
+> A production-grade learning roadmap for becoming an industry-ready full-stack engineer using HTML, CSS, JavaScript, React, Next.js, Java backend, APIs, databases, DevOps, cloud, and system design.
 
-> A complete full stack frontend learning repository for students and beginners: **JavaScript tutorial**, **React tutorial**, projects, interview prep, and deployment guidance.
+## SEO Keywords
+Full-Stack Development Roadmap, Full-Stack Engineer Preparation, Java Backend Learning, React and Next.js Course, System Design for Developers, DevOps and Cloud for Beginners, Production Architecture, Interview Preparation, Portfolio Projects
 
-A structured, beginner-to-advanced learning repository focused on **frontend full stack foundations**:
-- JavaScript fundamentals and DOM projects
-- React core to advanced concepts
-- Real mini-projects you can run, improve, and showcase
+## Why this repository exists
+- Convert fragmented learning into a **modular, progression-based system**.
+- Teach both **conceptual depth** and **production implementation**.
+- Build an interview-ready and recruiter-visible **engineering portfolio**.
 
-## Keywords (for discoverability)
-
-Full Stack, Full Stack Developer, JavaScript, JavaScript Projects, JavaScript Tutorial, React, React Projects, React Tutorial, Frontend Development, Web Development, Interview Preparation, DSA in JavaScript, Context API, Hooks, API Integration, React Testing, Performance Optimization
-
-## Why this repository
-
-- Covers **basic to advanced** topics in a guided order.
-- Includes **explained code examples** with comments for learning.
-- Contains **mini projects** you can showcase on GitHub portfolio.
-- Includes **testing, optimization, and deployment** checkpoints.
-
-## Repository Structure
+## Learning Architecture
 
 ```text
-fullstack/
-├── 01-javascript/
-│   ├── README.md
-│   ├── 01-product-filter-dashboard/
-│   ├── 02-language-fundamentals/
-│   ├── 03-dom-and-browser/
-│   ├── 04-asynchronous-javascript/
-│   ├── 05-oop-and-modules/
-│   ├── 06-data-structures-algorithms/
-│   ├── 07-mini-projects/
-│   ├── 08-interview-prep/
-│   ├── 09-advanced-javascript-concepts/
-│   ├── 10-oop-in-javascript/
-│   ├── 11-browser-apis/
-│   └── 12-performance-and-optimization/
-├── 02-react/
-│   ├── README.md
-│   ├── 01-react-router-task-manager/
-│   ├── 02-auth-theme-context/
-│   ├── 03-advanced-ui-design-system/
-│   ├── 04-react-performance-optimization/
-│   ├── 05-react-testing-task-manager/
-│   ├── 06-react-core-concepts/
-│   ├── 07-react-hooks-deep-dive/
-│   ├── 08-state-management-patterns/
-│   ├── 09-forms-validation/
-│   ├── 10-api-integration/
-│   ├── 11-performance-and-optimization/
-│   ├── 12-testing-guide/
-│   ├── 13-system-design-and-deployment/
-│   ├── 14-advanced-react-patterns/
-│   ├── 15-advanced-react-concepts/
-│   └── 16-production-level-skills/
-├── 03-bonus-industry-skills/
-├── TOPIC_COVERAGE_MATRIX.md
-└── LEARNING_PATH.md
+Beginner Layer      : 00-03  (Foundations + Web Basics)
+Intermediate Layer  : 04-10  (Advanced JS + React + Next + Backend + APIs + DB + Auth)
+Advanced Layer      : 11-16  (System Design + DevOps + Cloud + Containers + CI/CD + Testing)
+Production Layer    : 17-21  (Observability + Recovery + Networking + Production Architecture + Real Projects)
 ```
 
-## Learning Flow
+## Standard Module Blueprint
 
-1. Start with [JavaScript Module](01-javascript/README.md)
-2. Move to [React Module](02-react/README.md)
-3. Track full topic mapping in [TOPIC_COVERAGE_MATRIX.md](TOPIC_COVERAGE_MATRIX.md)
-4. Follow weekly milestones in [LEARNING_PATH.md](LEARNING_PATH.md)
-5. Build and publish your own improvements for each mini-project
+Each module now follows a consistent structure:
 
-## Start Here
-
-- Foundation glossary: [00-start-here-glossary.md](00-start-here-glossary.md)
-- Full 00 references index: [00-reference-index.md](00-reference-index.md)
-- JavaScript definitions: [01-javascript/00-javascript-keywords-reference.md](01-javascript/00-javascript-keywords-reference.md)
-- React definitions/hooks: [02-react/00-react-keywords-hooks-reference.md](02-react/00-react-keywords-hooks-reference.md)
-- Every major module contains a local `00-reference.md` for quick concept lookup.
-- New learners: open [LEARNING_PATH.md](LEARNING_PATH.md)
-- Topic-by-topic proof: open [TOPIC_COVERAGE_MATRIX.md](TOPIC_COVERAGE_MATRIX.md)
-- JavaScript track: open [01-javascript/README.md](01-javascript/README.md)
-- React track: open [02-react/README.md](02-react/README.md)
-
-## Quick Navigation
-
-- 🧭 **Start**: [00-start-here-glossary.md](00-start-here-glossary.md)
-- 📘 **All 00 References**: [00-reference-index.md](00-reference-index.md)
-- 🟨 **JavaScript Roadmap**: [01-javascript/README.md](01-javascript/README.md)
-- ⚛️ **React Roadmap**: [02-react/README.md](02-react/README.md)
-- 🧪 **Testing Track**: [02-react/12-testing-guide](02-react/12-testing-guide)
-- 🚀 **Production Skills**: [02-react/16-production-level-skills](02-react/16-production-level-skills)
-- 🏆 **Bonus Industry Skills**: [03-bonus-industry-skills](03-bonus-industry-skills)
-- ✅ **Coverage Matrix**: [TOPIC_COVERAGE_MATRIX.md](TOPIC_COVERAGE_MATRIX.md)
-
-## Complete Topic Coverage
-
-### JavaScript (Basic to Advanced)
-- Variables, data types, operators, conditionals
-- Functions, loops, arrays, objects, ES6 features
-- DOM events, browser APIs, dynamic UI updates
-- Asynchronous JavaScript: callbacks, promises, async/await, fetch
-- OOP, classes, module system, reusable utilities
-- Data structures, complexity basics, interview practice
-
-### React (Basic to Advanced)
-- Components, props, state, composition
-- Hooks: useEffect, useMemo, useCallback
-- State management patterns: Context + Reducer
-- Forms and validation
-- API integration and loading/error states
-- Performance optimization and memoization
-- Testing basics (React Testing Library)
-- System design and deployment checklist
-
-## Mini Projects Included
-
-### JavaScript
-- **Product Filter Dashboard**  
-  Sorting + filtering + responsive UI using HTML/CSS/Vanilla JS.
-- **Language + ES6 Foundations**
-- **DOM + Browser APIs**
-- **Async JavaScript (callbacks/promises/async-await/fetch)**
-- **OOP + Modules**
-- **Data Structures + Complexity Basics**
-- **Interview Prep Question Set**
-
-### React
-- **React Router Task Manager**  
-  Routing + hooks + localStorage + reusable components.
-- **Auth + Theme Context**  
-  Context API practice with authentication/theme state patterns.
-- **Advanced UI Design System**  
-  UI component ecosystems (MUI/Ant Design/Recharts).
-- **React Performance Optimization**  
-  Performance-focused React patterns and optimization exercises.
-- **React Testing Task Manager**  
-  Unit tests + snapshot tests + React Testing Library.
-- **React Core Concepts + Hooks Deep Dive**
-- **State Patterns + Forms + API Integration**
-- **Performance, Testing, System Design, Deployment Guides**
-
-## How to Run a Project
-
-Go into any project folder with a `package.json`:
-
-```bash
-cd <project-folder>
-npm install
-npm run dev
+```text
+<module>/
+├── README.md
+├── 01_code_examples/
+│   └── README.md
+├── 02_practice_problems/
+│   └── README.md
+├── 03_interview_questions/
+│   └── README.md
+├── 04_mini_project/
+│   └── README.md
+└── 05_advanced_deep_dive/
+    └── README.md
 ```
 
-For the CRA-based testing project:
+## Complete Module Map
 
-```bash
-npm start
-```
+### Foundation
+- [00_Fundamentals](00_Fundamentals/README.md)
+- [01_HTML](01_HTML/README.md)
+- [02_CSS](02_CSS/README.md)
+- [03_JavaScript](03_JavaScript/README.md)
 
-## Contribution Ideas
+### Frontend + Backend Core
+- [04_Advanced_JavaScript](04_Advanced_JavaScript/README.md)
+- [05_React](05_React/README.md)
+- [06_NextJS](06_NextJS/README.md)
+- [07_Java_Backend](07_Java_Backend/README.md)
+- [08_APIs_and_HTTP](08_APIs_and_HTTP/README.md)
+- [09_Databases](09_Databases/README.md)
+- [10_Authentication_and_Security](10_Authentication_and_Security/README.md)
 
-- Add one new feature per mini-project
-- Add tests to projects that currently have low coverage
-- Refactor repeated UI sections into reusable components
-- Write deployment guides (Vercel / Netlify)
+### Advanced Engineering
+- [11_System_Design](11_System_Design/README.md)
+- [12_DevOps](12_DevOps/README.md)
+- [13_Cloud_Infrastructure](13_Cloud_Infrastructure/README.md)
+- [14_Containers_and_Orchestration](14_Containers_and_Orchestration/README.md)
+- [15_CI_CD](15_CI_CD/README.md)
+- [16_Testing](16_Testing/README.md)
 
-## Goal
+### Production Readiness
+- [17_Monitoring_and_Logging](17_Monitoring_and_Logging/README.md)
+- [18_Backup_and_Recovery](18_Backup_and_Recovery/README.md)
+- [19_Networking](19_Networking/README.md)
+- [20_Production_Architecture](20_Production_Architecture/README.md)
+- [21_Real_World_Projects](21_Real_World_Projects/README.md)
 
-Make this repository a complete interview-ready portfolio path from **JavaScript basics** to **advanced React development**.
+## Technical Coverage
 
-## GitHub Topic Suggestions
+### Frontend
+- HTML: semantics, accessibility, SEO foundations
+- CSS: responsive design, flexbox, grid, animations
+- JavaScript: ES6+, async programming, closures, event loop, memory
+- React: hooks, state architecture, performance patterns
+- Next.js: SSR, SSG, routing, middleware, optimization
 
-When publishing, add these repository topics in GitHub settings:
+### Backend
+- Java core, OOP, collections, multithreading
+- Spring Boot fundamentals and REST architecture
+- API design, validation, error handling, versioning
+- Auth flows: JWT + OAuth fundamentals
+- Microservices introduction and service boundaries
 
-`full-stack`, `javascript`, `react`, `web-development`, `frontend`, `react-hooks`, `context-api`, `javascript-projects`, `react-projects`, `coding-interview`
+### Data + Infra
+- SQL + NoSQL modeling and optimization
+- ACID, transactions, indexing, normalization
+- Linux, Nginx, DNS, networking fundamentals
+- Docker, Kubernetes, CI/CD, GitHub Actions
+- AWS fundamentals, load balancing, observability
+- Monitoring with Prometheus, logging with ELK
+- Backup strategy and disaster recovery planning
 
-## Publish Kit
+## How to use this repository
+1. Follow modules in order from `00` to `21`.
+2. In each module, complete: examples → practice → interview → mini-project → deep-dive.
+3. Track progress with [LEARNING_PATH.md](LEARNING_PATH.md) and [TOPIC_COVERAGE_MATRIX.md](TOPIC_COVERAGE_MATRIX.md).
+4. Publish each mini-project with a clean README and screenshots.
 
-- Repo description and tags: [GITHUB_PUBLISHING_GUIDE.md](GITHUB_PUBLISHING_GUIDE.md)
-- Screenshot capture checklist: [SCREENSHOT_CHECKLIST.md](SCREENSHOT_CHECKLIST.md)
-- Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+## Recruiter/Portfolio Readiness Checklist
+- Problem statement + architecture included in every major project README
+- Tests, linting, and CI evidence included for critical projects
+- Deploy at least 2 frontend projects + 2 backend APIs + 1 full-stack system
+- Include production concerns: logging, monitoring, scalability, security
+
+## Legacy Tracks (Retained)
+- [01-javascript](01-javascript)
+- [02-react](02-react)
+- [03-bonus-industry-skills](03-bonus-industry-skills)
+
+These remain available for backward compatibility while the modular `00-21` path becomes the primary roadmap.
+
+## Supporting Docs
+- [00-start-here-glossary.md](00-start-here-glossary.md)
+- [00-reference-index.md](00-reference-index.md)
+- [LEARNING_PATH.md](LEARNING_PATH.md)
+- [TOPIC_COVERAGE_MATRIX.md](TOPIC_COVERAGE_MATRIX.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [GITHUB_PUBLISHING_GUIDE.md](GITHUB_PUBLISHING_GUIDE.md)
+
+<!-- DOCS_UPGRADE_V2026_START -->
+## Full-Stack Engineering Knowledge Base Upgrade (2026)
+
+### Breadcrumb Navigation
+[Home](README.md)
+
+### Indexed Table of Contents
+- [Vision and Professional Introduction](#vision-and-professional-introduction)
+- [Audience Profile](#audience-profile)
+- [Repository Information Architecture](#repository-information-architecture)
+- [Structured Learning Roadmap](#structured-learning-roadmap)
+- [Complete Module Index](#complete-module-index)
+- [Technology Stack Breakdown](#technology-stack-breakdown)
+- [Architecture Philosophy](#architecture-philosophy)
+- [How to Use This Repository](#how-to-use-this-repository-production-study-path)
+- [Contribution Workflow](#contribution-workflow)
+- [License](#license)
+- [Cross-Module Navigation](#cross-module-navigation)
+
+### Vision and Professional Introduction
+This repository is structured as a production-grade full-stack engineering knowledge base, not only as a tutorial collection. The objective is to connect deep theory, executable examples, architecture trade-offs, and production-oriented constraints across the full delivery lifecycle: browser runtime, backend services, data systems, infrastructure, CI/CD, reliability, and operations.
+
+### Audience Profile
+- **Beginner engineers:** build a first-principles mental model with hands-on examples and progressive mini-projects.
+- **Intermediate developers:** strengthen implementation decisions, debugging strategy, and system-level reasoning.
+- **Advanced engineers:** study internal working mechanisms, scaling constraints, reliability patterns, and architecture evolution.
+
+### Repository Information Architecture
+- Primary path: `00` through `21` modules with standardized subfolders (`01_code_examples`, `02_practice_problems`, `03_interview_questions`, `04_mini_project`, `05_advanced_deep_dive`).
+- Supporting references: `LEARNING_PATH.md`, `TOPIC_COVERAGE_MATRIX.md`, `00-reference-index.md`, and `00-start-here-glossary.md`.
+- Legacy tracks remain preserved (`01-javascript`, `02-react`, `03-bonus-industry-skills`) for compatibility and parallel study.
+
+### Structured Learning Roadmap
+| Module | Stage | Entry |
+|---|---|---|
+| 00_Fundamentals | Foundations | [00_Fundamentals/README.md](00_Fundamentals/README.md) |
+| 01_HTML | Foundations | [01_HTML/README.md](01_HTML/README.md) |
+| 02_CSS | Foundations | [02_CSS/README.md](02_CSS/README.md) |
+| 03_JavaScript | Foundations | [03_JavaScript/README.md](03_JavaScript/README.md) |
+| 04_Advanced_JavaScript | Core Full-Stack | [04_Advanced_JavaScript/README.md](04_Advanced_JavaScript/README.md) |
+| 05_React | Core Full-Stack | [05_React/README.md](05_React/README.md) |
+| 06_NextJS | Core Full-Stack | [06_NextJS/README.md](06_NextJS/README.md) |
+| 07_Java_Backend | Core Full-Stack | [07_Java_Backend/README.md](07_Java_Backend/README.md) |
+| 08_APIs_and_HTTP | Core Full-Stack | [08_APIs_and_HTTP/README.md](08_APIs_and_HTTP/README.md) |
+| 09_Databases | Core Full-Stack | [09_Databases/README.md](09_Databases/README.md) |
+| 10_Authentication_and_Security | Core Full-Stack | [10_Authentication_and_Security/README.md](10_Authentication_and_Security/README.md) |
+| 11_System_Design | Advanced Engineering | [11_System_Design/README.md](11_System_Design/README.md) |
+| 12_DevOps | Advanced Engineering | [12_DevOps/README.md](12_DevOps/README.md) |
+| 13_Cloud_Infrastructure | Advanced Engineering | [13_Cloud_Infrastructure/README.md](13_Cloud_Infrastructure/README.md) |
+| 14_Containers_and_Orchestration | Advanced Engineering | [14_Containers_and_Orchestration/README.md](14_Containers_and_Orchestration/README.md) |
+| 15_CI_CD | Advanced Engineering | [15_CI_CD/README.md](15_CI_CD/README.md) |
+| 16_Testing | Advanced Engineering | [16_Testing/README.md](16_Testing/README.md) |
+| 17_Monitoring_and_Logging | Production Architecture | [17_Monitoring_and_Logging/README.md](17_Monitoring_and_Logging/README.md) |
+| 18_Backup_and_Recovery | Production Architecture | [18_Backup_and_Recovery/README.md](18_Backup_and_Recovery/README.md) |
+| 19_Networking | Production Architecture | [19_Networking/README.md](19_Networking/README.md) |
+| 20_Production_Architecture | Production Architecture | [20_Production_Architecture/README.md](20_Production_Architecture/README.md) |
+| 21_Real_World_Projects | Production Architecture | [21_Real_World_Projects/README.md](21_Real_World_Projects/README.md) |
+
+### Complete Module Index
+- [00_Fundamentals](00_Fundamentals/README.md)
+- [01_HTML](01_HTML/README.md)
+- [02_CSS](02_CSS/README.md)
+- [03_JavaScript](03_JavaScript/README.md)
+- [04_Advanced_JavaScript](04_Advanced_JavaScript/README.md)
+- [05_React](05_React/README.md)
+- [06_NextJS](06_NextJS/README.md)
+- [07_Java_Backend](07_Java_Backend/README.md)
+- [08_APIs_and_HTTP](08_APIs_and_HTTP/README.md)
+- [09_Databases](09_Databases/README.md)
+- [10_Authentication_and_Security](10_Authentication_and_Security/README.md)
+- [11_System_Design](11_System_Design/README.md)
+- [12_DevOps](12_DevOps/README.md)
+- [13_Cloud_Infrastructure](13_Cloud_Infrastructure/README.md)
+- [14_Containers_and_Orchestration](14_Containers_and_Orchestration/README.md)
+- [15_CI_CD](15_CI_CD/README.md)
+- [16_Testing](16_Testing/README.md)
+- [17_Monitoring_and_Logging](17_Monitoring_and_Logging/README.md)
+- [18_Backup_and_Recovery](18_Backup_and_Recovery/README.md)
+- [19_Networking](19_Networking/README.md)
+- [20_Production_Architecture](20_Production_Architecture/README.md)
+- [21_Real_World_Projects](21_Real_World_Projects/README.md)
+
+### Technology Stack Breakdown
+- **Frontend foundations:** HTML, CSS, modern JavaScript, browser APIs, performance, accessibility, and SEO.
+- **Frontend architecture:** React, Next.js, routing strategies, state management, API integration, and testing.
+- **Backend and APIs:** Java backend patterns, service design, protocol correctness, and API evolution strategies.
+- **Data systems:** relational and non-relational modeling, query optimization, transactions, indexing, and data consistency.
+- **Platform and operations:** DevOps, cloud infrastructure, containers, CI/CD, observability, backup/recovery, and networking.
+- **System-level engineering:** system design and production architecture with scalability, reliability, and cost-awareness.
+
+### Architecture Philosophy
+- Build from fundamentals toward production through explicit abstraction layers.
+- Prefer clear contracts and deterministic behavior over hidden coupling.
+- Treat non-functional requirements (security, performance, reliability, operability) as first-class design inputs.
+- Evolve systems incrementally through measurable feedback loops and documented trade-offs.
+
+### How to Use This Repository (Production Study Path)
+1. Traverse modules in numeric order for progressive depth.
+2. In each module, complete examples first, then practice, interview, mini-project, and advanced deep dive.
+3. Add architecture notes per project: assumptions, constraints, trade-offs, and failure handling.
+4. Validate with tests and instrumentation before optimization.
+5. Revisit related modules via cross-links to connect theory across frontend, backend, data, and operations.
+
+### Contribution Workflow
+- Follow [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+- Keep documentation synchronized with real folder structure and runnable examples.
+- For each new concept, include definition, internal mechanics, usage boundaries, performance/security implications, and repository code references.
+- Preserve existing depth; expand clarity without removing theoretical context.
+
+### License
+This repository is distributed under the terms defined in [LICENSE](LICENSE).
+
+### Cross-Module Navigation
+- **First Learning Module:** [00_Fundamentals](00_Fundamentals/README.md)
+- **Core Frontend Progression:** [01_HTML](01_HTML/README.md) → [02_CSS](02_CSS/README.md) → [03_JavaScript](03_JavaScript/README.md) → [05_React](05_React/README.md) → [06_NextJS](06_NextJS/README.md)
+- **Core Backend/Data Progression:** [07_Java_Backend](07_Java_Backend/README.md) → [08_APIs_and_HTTP](08_APIs_and_HTTP/README.md) → [09_Databases](09_Databases/README.md) → [10_Authentication_and_Security](10_Authentication_and_Security/README.md)
+- **Production Progression:** [11_System_Design](11_System_Design/README.md) → [12_DevOps](12_DevOps/README.md) → [13_Cloud_Infrastructure](13_Cloud_Infrastructure/README.md) → [14_Containers_and_Orchestration](14_Containers_and_Orchestration/README.md) → [15_CI_CD](15_CI_CD/README.md) → [16_Testing](16_Testing/README.md) → [17_Monitoring_and_Logging](17_Monitoring_and_Logging/README.md) → [18_Backup_and_Recovery](18_Backup_and_Recovery/README.md) → [19_Networking](19_Networking/README.md) → [20_Production_Architecture](20_Production_Architecture/README.md) → [21_Real_World_Projects](21_Real_World_Projects/README.md)
+
+<!-- DOCS_UPGRADE_V2026_END -->

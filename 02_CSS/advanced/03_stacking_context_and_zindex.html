@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stacking Context and z-index</title>
+    <style>
+      .page {
+        position: relative;
+        height: 320px;
+        margin: 1rem;
+        border: 1px solid #cbd5e1;
+      }
+
+      .card {
+        position: absolute;
+        width: 180px;
+        height: 120px;
+        padding: 0.5rem;
+        color: white;
+      }
+
+      .card-a {
+        top: 20px;
+        left: 20px;
+        background: #2563eb;
+        z-index: 1;
+      }
+
+      .card-b {
+        top: 60px;
+        left: 80px;
+        background: #dc2626;
+        z-index: 2;
+      }
+
+      .context-parent {
+        position: relative;
+        z-index: 0;
+        transform: translateZ(0);
+      }
+
+      .modal {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        background: rgba(15, 23, 42, 0.45);
+      }
+
+      /* Beginner: z-index works only on positioned elements. */
+      /* Advanced: transform creates stacking context and can cause overlay bugs. */
+    </style>
+  </head>
+  <body>
+    <section class="page context-parent">
+      <article class="card card-a">Card A</article>
+      <article class="card card-b">Card B</article>
+      <div class="modal">Modal overlay in same stacking context</div>
+    </section>
+  </body>
+</html>

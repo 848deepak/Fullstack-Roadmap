@@ -1,0 +1,10 @@
+groups:
+  - name: slo-burn-rate
+    rules:
+      - alert: HighErrorBudgetBurn
+        expr: rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) > 0.02
+        for: 15m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Error budget burning too fast"

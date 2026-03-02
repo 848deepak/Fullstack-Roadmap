@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beginner Semantic Structure</title>
+  </head>
+  <body>
+    <!-- Beginner: semantic tags describe purpose, not styling. -->
+    <!-- Advanced: landmarks improve assistive-tech navigation and SEO parsing. -->
+    <header>
+      <h1>Learning Semantic HTML</h1>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About This Page</h2>
+        <p>This page demonstrates clean document structure with semantic elements.</p>
+      </section>
+
+      <section id="topics" aria-labelledby="topics-title">
+        <h2 id="topics-title">Topics</h2>
+        <article>
+          <h3>HTML Fundamentals</h3>
+          <p>Use heading hierarchy and meaningful sections.</p>
+        </article>
+        <article>
+          <h3>Accessibility</h3>
+          <p>Use labels, alt text, and keyboard-friendly structure.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>Contact: learner@example.com</p>
+    </footer>
+  </body>
+</html>

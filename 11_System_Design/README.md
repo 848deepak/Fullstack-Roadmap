@@ -74,3 +74,148 @@ Without System Design, a sudden spike in traffic (a Viral Tweet or Black Friday 
 ## 10. Production-Level Best Practices
 - **Stateless Web Tiers:** Any given web server instance should be able to die, and requests instantly route to another instance without losing state (like login sessions). Store ALL state outside the server (in DBs or Redis).
 - **Microservices Boundary:** When breaking a Monolith into microservices, break them by Business Capability (Auth Service, Payment Service), not by technical layers. Each service crucially must own its own isolated database to prevent hidden coupling.
+
+<!-- DOCS_UPGRADE_V2026_START -->
+## Documentation Upgrade Layer
+
+### Breadcrumb Navigation
+[Home](../README.md) > 11_System_Design
+
+### Internal Contents
+- [Documentation Upgrade Layer](#documentation-upgrade-layer)
+- [Conceptual Depth Model](#conceptual-depth-model)
+- [Beginner Perspective](#beginner-perspective)
+- [Intermediate Perspective](#intermediate-perspective)
+- [Advanced Internal Working](#advanced-internal-working)
+- [Under-the-Hood Architecture](#under-the-hood-architecture)
+- [Real-World Use Cases](#real-world-use-cases)
+- [Performance Considerations](#performance-considerations-upgrade)
+- [Security Considerations](#security-considerations-upgrade)
+- [Edge Cases and Limitations](#edge-cases-and-limitations)
+- [Common Mistakes](#common-mistakes-upgrade)
+- [Interview-Level Theory Questions](#interview-level-theory-questions-upgrade)
+- [Production Best Practices](#production-best-practices-upgrade)
+- [Folder Structure Diagram](#folder-structure-diagram-actual)
+- [Examples Projects Advanced Production Map](#examples-projects-advanced-production-map)
+- [Code References in Repository](#code-references-in-repository)
+- [Cross-Module Links](#cross-module-links)
+- [Navigation](#navigation)
+
+### Conceptual Depth Model
+This documentation extension preserves all existing module theory while adding architecture-level depth for `Module 11: System Design`. This README captures the module-level architecture narrative and practical learning progression. The dominant learning axis here is **scalable distributed architecture**, with internal behavior centered on **inter-service communication and failure coordination** and state/contracts centered on **event streams, aggregates, and replicated state**.
+
+For every major concept in this module, analyze it through this lens:
+- **Definition:** what the concept is and the precise technical boundary it defines.
+- **Why it exists:** the failure mode or engineering bottleneck it solves.
+- **How it works internally:** state changes, control flow, data flow, runtime behavior, and system boundaries.
+- **When to use it:** the context where this concept provides leverage.
+- **When not to use it:** cost, complexity, coupling, and maintainability trade-offs.
+- **Performance implications:** latency, throughput, memory, I/O, network, CPU, and scalability behavior.
+- **Security implications:** trust boundaries, attack surface, data exposure risks, and mitigation patterns.
+- **Real-world scenario:** a production context where the concept appears in a full-stack system.
+- **Code reference in repository:** practical anchor points inside this repository.
+
+### Beginner Perspective
+- Start with observable behavior for **scalable distributed architecture** before introducing abstractions.
+- Track what inputs produce what outputs in **event streams, aggregates, and replicated state** workflows.
+- Use one example at a time and explain expected behavior before extending it.
+
+### Intermediate Perspective
+- Connect module outputs to neighboring layers and contracts impacted by **scalable distributed architecture**.
+- Analyze execution boundaries in **inter-service communication and failure coordination** to find bottlenecks and race conditions.
+- Compare implementation options using maintainability, operability, and migration cost.
+
+### Advanced Internal Working
+- Model normal-path and failure-path control flow for **inter-service communication and failure coordination**.
+- Specify invariants around **event streams, aggregates, and replicated state** that must hold under scale and partial failure.
+- Document rollback and recovery behavior before introducing optimization layers.
+
+### Under-the-Hood Architecture
+- Core execution model in this module: **inter-service communication and failure coordination**.
+- Primary state domain and contracts: **event streams, aggregates, and replicated state**.
+- Dominant architectural risk to isolate: **architectural bottlenecks and weak failure isolation**.
+
+### Real-World Use Cases
+- Build or migrate a system where **scalable distributed architecture** is a critical delivery concern.
+- Operate high-change environments where **inter-service communication and failure coordination** behavior must stay predictable.
+- Harden production paths where failures in **event streams, aggregates, and replicated state** handling have business impact.
+
+### Performance Considerations Upgrade
+- Benchmark latency and throughput at boundaries affected by **inter-service communication and failure coordination**.
+- Reduce unnecessary work in **event streams, aggregates, and replicated state** processing paths before micro-optimizations.
+- Track p95/p99 under burst traffic and verify graceful degradation behavior.
+
+### Security Considerations Upgrade
+- Protect trust boundaries around **event streams, aggregates, and replicated state** with strict validation and least privilege.
+- Review abuse scenarios that exploit weak assumptions in **scalable distributed architecture** flows.
+- Add auditability for privileged operations and incident reconstruction.
+
+### Edge Cases and Limitations
+- Invalid input types, partial payloads, and schema drift across versions.
+- Concurrency conflicts, race conditions, and eventual consistency gaps in distributed flows.
+- Environment-specific behavior differences (local, CI, staging, production).
+
+### Common Mistakes Upgrade
+- Treating **inter-service communication and failure coordination** behavior as deterministic without measuring it under load.
+- Introducing abstractions before clarifying ownership of **event streams, aggregates, and replicated state** boundaries.
+- Ignoring **architectural bottlenecks and weak failure isolation** until late integration or production rollout.
+
+### Interview-Level Theory Questions Upgrade
+1. How do you derive a system design from product requirements, SLOs, and growth assumptions instead of jumping directly to infrastructure components?
+2. Compare synchronous and asynchronous service interactions in terms of latency, consistency, operability, and failure blast radius.
+3. How would you design graceful degradation for a high-traffic product when key dependencies (cache, DB, third-party APIs) fail partially?
+4. What signals indicate a monolith should remain modular versus being split into microservices?
+5. How do you choose and defend partitioning strategy, replication model, and cache topology for a read-heavy global workload?
+
+### Production Best Practices Upgrade
+- Start every design with explicit capacity estimates, SLO targets, and failure budgets so architecture choices remain measurable.
+- Keep critical paths simple and isolate complexity behind clear boundaries with documented ownership.
+- Design for failure first: timeouts, retries with jitter, circuit breakers, and fallback behavior per dependency.
+- Build observability into architecture diagrams: key metrics, trace boundaries, saturation indicators, and alert intent.
+- Revisit architecture decisions periodically as traffic, team shape, and product constraints evolve.
+
+### Folder Structure Diagram (Actual)
+```text
+11_System_Design/
+├── 01_code_examples/
+│   ├── README.md
+│   └── token_bucket_rate_limiter.js
+├── 02_practice_problems/
+│   └── README.md
+├── 03_interview_questions/
+│   └── README.md
+├── 04_mini_project/
+│   └── README.md
+├── 05_advanced_deep_dive/
+│   └── README.md
+├── advanced/
+│   └── 01_circuit_breaker_pattern.js
+├── examples/
+│   └── 01_consistent_hashing_ring.js
+├── production/
+│   └── 01_slo_error_budget.js
+├── projects/
+│   └── 01_url_shortener_core.js
+├── README.md
+```
+
+### Examples Projects Advanced Production Map
+- [Examples](01_code_examples/README.md): foundational patterns and minimal reproducible implementations.
+- [Projects](04_mini_project/README.md): integrated workflows with realistic constraints and trade-offs.
+- [Advanced](05_advanced_deep_dive/README.md): deeper internals, system boundaries, and scaling-oriented decisions.
+- [Production Architecture](../20_Production_Architecture/README.md): reliability, observability, and long-term operability principles.
+
+### Code References in Repository
+- This section is concept-first. Reference neighboring examples and projects in this module.
+
+### Cross-Module Links
+- [Root Roadmap](../README.md)
+- [System Design](README.md)
+- [Testing](../16_Testing/README.md)
+- [Production Architecture](../20_Production_Architecture/README.md)
+
+### Navigation
+- **Previous Module:** [10_Authentication_and_Security](../10_Authentication_and_Security/README.md)
+- **Next Module:** [12_DevOps](../12_DevOps/README.md)
+
+<!-- DOCS_UPGRADE_V2026_END -->

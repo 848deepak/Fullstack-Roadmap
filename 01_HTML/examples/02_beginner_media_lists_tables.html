@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Media Lists Tables</title>
+  </head>
+  <body>
+    <h1>HTML Building Blocks</h1>
+
+    <section>
+      <h2>Lists</h2>
+      <!-- Beginner: use ul for unordered items and ol for sequence. -->
+      <!-- Advanced: lists create predictable semantics for screen readers. -->
+      <ul>
+        <li>Semantic tags</li>
+        <li>Forms</li>
+        <li>Accessibility</li>
+      </ul>
+
+      <ol>
+        <li>Plan content</li>
+        <li>Write structure</li>
+        <li>Test with keyboard</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Image with Fallback</h2>
+      <!-- Beginner: alt text explains image meaning. -->
+      <!-- Advanced: onerror fallback protects layout from broken URLs edge case. -->
+      <img
+        src="https://example.com/non-existent-image.jpg"
+        alt="Placeholder article thumbnail"
+        width="320"
+        height="180"
+        onerror="this.onerror=null; this.src='https://via.placeholder.com/320x180?text=Image+Unavailable';"
+      />
+    </section>
+
+    <section>
+      <h2>Accessible Table</h2>
+      <table border="1">
+        <caption>Weekly Study Plan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Monday</th>
+            <td>HTML</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">Tuesday</th>
+            <td>CSS</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>

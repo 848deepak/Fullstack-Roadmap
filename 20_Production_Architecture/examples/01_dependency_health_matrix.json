@@ -1,0 +1,8 @@
+{
+  "service": "order-api",
+  "dependencies": [
+    { "name": "postgres", "critical": true, "timeoutMs": 200 },
+    { "name": "redis", "critical": false, "timeoutMs": 100 },
+    { "name": "payment-gateway", "critical": true, "timeoutMs": 500 }
+  ]
+}

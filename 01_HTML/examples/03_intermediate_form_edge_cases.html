@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intermediate Form Edge Cases</title>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+
+    <form action="/signup" method="post" novalidate>
+      <!-- Beginner: label + input id pairing is required for usability. -->
+      <!-- Advanced: autocomplete hints improve UX and reduce entry errors. -->
+      <label for="fullName">Full Name</label>
+      <input id="fullName" name="fullName" type="text" required minlength="2" maxlength="80" autocomplete="name" />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required maxlength="120" autocomplete="email" />
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required minlength="12" maxlength="128" autocomplete="new-password" />
+
+      <label for="age">Age</label>
+      <input id="age" name="age" type="number" min="13" max="120" step="1" required />
+
+      <!-- Edge case: terms unchecked must block submit. -->
+      <label>
+        <input type="checkbox" name="terms" required />
+        I agree to the Terms and Privacy Policy.
+      </label>
+
+      <button type="submit">Create account</button>
+    </form>
+
+    <p role="status" aria-live="polite">Validation is handled by browser constraints and server-side checks.</p>
+  </body>
+</html>

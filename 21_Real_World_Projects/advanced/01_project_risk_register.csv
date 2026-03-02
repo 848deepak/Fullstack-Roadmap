@@ -1,0 +1,4 @@
+risk,impact,likelihood,mitigation
+api_rate_limit,high,medium,implement token bucket and caching
+database_hotspot,high,medium,add index and partitioning
+release_regression,high,low,canary deployment with rollback

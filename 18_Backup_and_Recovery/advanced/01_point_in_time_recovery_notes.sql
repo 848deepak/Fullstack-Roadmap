@@ -1,0 +1,4 @@
+-- PITR concept: recover database to a specific timestamp.
+-- Example command (PostgreSQL):
+-- restore_command = 'cp /archive/%f %p'
+-- recovery_target_time = '2026-02-28 10:20:00+00'

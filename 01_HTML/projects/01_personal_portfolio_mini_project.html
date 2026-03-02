@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio mini project using semantic HTML" />
+    <title>Portfolio Mini Project</title>
+  </head>
+  <body>
+    <!-- Beginner: one clear h1 defines the page topic. -->
+    <!-- Advanced: sectioning + ids improves deep-linking and crawlability. -->
+    <header>
+      <h1>Deepak Pandey - Full-Stack Developer</h1>
+      <nav aria-label="Portfolio navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p>I build scalable full-stack applications with strong system design and clean architecture.</p>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <ul>
+          <li>Frontend: HTML, CSS, JavaScript, React, Next.js</li>
+          <li>Backend: Java, Spring Boot, REST APIs</li>
+          <li>Cloud/DevOps: Docker, Kubernetes, CI/CD, AWS</li>
+        </ul>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <article>
+          <h3>Order Management System</h3>
+          <p>Built with Spring Boot + PostgreSQL + React dashboard.</p>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer">Live demo</a>
+        </article>
+        <article>
+          <h3>Monitoring Platform</h3>
+          <p>Prometheus + Grafana + alert pipelines for production observability.</p>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer">Architecture doc</a>
+        </article>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <form action="/contact" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" required minlength="2" maxlength="80" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required minlength="20" maxlength="1000"></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Deepak Pandey</p>
+    </footer>
+  </body>
+</html>

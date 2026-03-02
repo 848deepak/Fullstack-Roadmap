@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Production-ready HTML template with performance and security defaults" />
+
+    <!-- Beginner: preconnect reduces DNS+TLS time for external origins. -->
+    <!-- Advanced: use sparingly for truly critical third-party origins only. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Advanced: preload critical assets to speed first paint. -->
+    <link rel="preload" href="/assets/critical.css" as="style" />
+
+    <!-- Security baseline (best handled in HTTP headers). -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+    <title>Production Base Template</title>
+    <link rel="stylesheet" href="/assets/critical.css" />
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Production HTML Entry</h1>
+    </header>
+
+    <main id="main-content">
+      <section>
+        <h2>Reliable Markup Baseline</h2>
+        <p>This template prioritizes semantic structure, loading strategy, and safe defaults.</p>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2026 Fullstack Learning Hub</small>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edge Case Content Resilience</title>
+    <style>
+      .card {
+        max-width: 460px;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        overflow-wrap: anywhere;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Edge Cases in HTML Content</h1>
+
+    <article class="card">
+      <h2>Extremely Long Word Handling</h2>
+      <!-- Advanced: overflow-wrap protects layout from unbroken user-generated tokens. -->
+      <p>superlongstringwithoutspaces_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    </article>
+
+    <article class="card" dir="rtl" lang="ar">
+      <h2>Right-to-Left Language Support</h2>
+      <!-- Beginner: dir attribute controls text direction. -->
+      <p>هذا مثال على المحتوى من اليمين إلى اليسار.</p>
+    </article>
+
+    <article class="card">
+      <h2>Empty State Pattern</h2>
+      <!-- Edge case: empty data should show fallback, not blank UI. -->
+      <p>No recent notifications available.</p>
+    </article>
+  </body>
+</html>

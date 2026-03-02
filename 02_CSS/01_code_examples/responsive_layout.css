@@ -1,0 +1,28 @@
+/* Beginner: CSS variables keep style values reusable and easy to update. */
+/* Advanced: design tokens support scalable design systems across large apps. */
+:root {
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --radius: 0.75rem;
+  --surface: #f8fafc;
+}
+
+* { box-sizing: border-box; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.card {
+  padding: var(--space-4);
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+/* Beginner: mobile-first breakpoint for larger screens. */
+/* Advanced: progressive enhancement reduces CSS complexity and overrides. */
+@media (min-width: 768px) {
+  .card { padding: calc(var(--space-4) + var(--space-2)); }
+}

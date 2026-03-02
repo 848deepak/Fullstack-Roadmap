@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Dashboard Layout</title>
+    <style>
+      :root {
+        --bg: #f1f5f9;
+        --panel: #ffffff;
+        --accent: #2563eb;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: var(--bg);
+      }
+
+      .dashboard {
+        display: grid;
+        grid-template-columns: 1fr;
+        min-height: 100vh;
+      }
+
+      .sidebar {
+        background: #1e293b;
+        color: #f8fafc;
+        padding: 1rem;
+      }
+
+      .main {
+        padding: 1rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .widget {
+        background: var(--panel);
+        border-radius: 10px;
+        padding: 1rem;
+        border-left: 4px solid var(--accent);
+      }
+
+      /* Beginner: adapt from single-column mobile to sidebar layout desktop. */
+      /* Advanced: keeps source order accessibility-friendly while enabling complex layouts. */
+      @media (min-width: 960px) {
+        .dashboard {
+          grid-template-columns: 260px 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <h1>Ops Dashboard</h1>
+        <p>Navigation and quick links</p>
+      </aside>
+      <main class="main">
+        <section class="widget"><h2>Traffic</h2><p>12,430 visits</p></section>
+        <section class="widget"><h2>Error Rate</h2><p>0.21%</p></section>
+        <section class="widget"><h2>Latency</h2><p>p95 = 180ms</p></section>
+      </main>
+    </div>
+  </body>
+</html>

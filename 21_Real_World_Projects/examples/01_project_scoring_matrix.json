@@ -1,0 +1,16 @@
+{
+  "criteria": [
+    "architecture",
+    "code_quality",
+    "testing",
+    "observability",
+    "deployment"
+  ],
+  "weights": {
+    "architecture": 0.25,
+    "code_quality": 0.2,
+    "testing": 0.2,
+    "observability": 0.15,
+    "deployment": 0.2
+  }
+}

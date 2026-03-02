@@ -1,0 +1,53 @@
+/* Beginner: CSS custom properties centralize repeated values. */
+/* Advanced: tokenized values improve maintainability across themes and breakpoints. */
+:root {
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --surface: #f8fafc;
+  --surface-2: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4);
+  background: var(--surface-2);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+.card {
+  padding: var(--space-4);
+  background: var(--surface);
+  border-radius: 12px;
+}
+
+/* Beginner: mobile-first breakpoint for larger screens. */
+/* Advanced: min-width strategy avoids override-heavy desktop-first CSS. */
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+}

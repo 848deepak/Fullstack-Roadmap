@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Production Checkout Form Edge Cases</title>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+
+    <!-- Beginner: browser validation offers first-pass guardrails. -->
+    <!-- Advanced: server-side validation remains mandatory for security and data integrity. -->
+    <form action="/checkout" method="post" autocomplete="on">
+      <fieldset>
+        <legend>Contact Details</legend>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required maxlength="120" autocomplete="email" />
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" pattern="[0-9+\-\s]{7,20}" required autocomplete="tel" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Shipping Address</legend>
+
+        <label for="address1">Address line 1</label>
+        <input id="address1" name="address1" required maxlength="120" />
+
+        <label for="postalCode">Postal code</label>
+        <input id="postalCode" name="postalCode" required minlength="4" maxlength="12" />
+
+        <!-- Edge case: international address variability -->
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">Select country</option>
+          <option value="IN">India</option>
+          <option value="US">United States</option>
+          <option value="DE">Germany</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Order Notes</legend>
+        <!-- Edge case: user leaves notes empty intentionally. -->
+        <textarea name="notes" maxlength="1000" placeholder="Optional delivery notes"></textarea>
+      </fieldset>
+
+      <button type="submit">Place order</button>
+    </form>
+
+    <p role="status" aria-live="polite">If submission fails, preserve user input and show field-level errors.</p>
+  </body>
+</html>

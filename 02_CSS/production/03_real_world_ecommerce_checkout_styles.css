@@ -1,0 +1,68 @@
+/* Real-world mini implementation: resilient checkout styles */
+/* Beginner: simple class names for forms, errors, and layout. */
+/* Advanced: state classes and validation styles designed for SSR + hydration-safe UX. */
+
+:root {
+  --ok: #166534;
+  --error: #b91c1c;
+  --surface: #ffffff;
+  --border: #cbd5e1;
+}
+
+.checkout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.checkout__section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+}
+
+.field--error input,
+.field--error select,
+.field--error textarea {
+  border-color: var(--error);
+}
+
+.field__message {
+  color: var(--error);
+  font-size: 0.875rem;
+}
+
+.banner--success {
+  border-left: 4px solid var(--ok);
+  background: #f0fdf4;
+  padding: 0.75rem;
+}
+
+/* Edge case: very narrow devices */
+@media (max-width: 340px) {
+  .checkout__section {
+    padding: 0.75rem;
+  }
+}
+
+/* Desktop enhancement */
+@media (min-width: 980px) {
+  .checkout {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-02-28T10:30:00Z",
+  "level": "INFO",
+  "service": "order-api",
+  "message": "Order created",
+  "requestId": "req-101",
+  "orderId": "ord-9001"
+}

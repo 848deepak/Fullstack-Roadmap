@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Edge Cases: Overflow</title>
+    <style>
+      .container {
+        max-width: 360px;
+        margin: 1rem;
+        border: 1px solid #cbd5e1;
+        padding: 1rem;
+      }
+
+      .title {
+        font-size: 1rem;
+        margin: 0 0 0.75rem;
+        overflow-wrap: anywhere;
+      }
+
+      .code-block {
+        max-height: 120px;
+        overflow: auto;
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 0.75rem;
+      }
+
+      /* Beginner: line-clamp limits large text in small cards. */
+      /* Advanced: protect list UIs from content spikes and API anomalies. */
+      .description {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="container">
+      <h1 class="title">superlongstringwithoutbreaks_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+      <p class="description">This is intentionally long content to verify clipping and overflow control in constrained mobile cards where backend payload can be unexpectedly verbose for a single field.</p>
+      <pre class="code-block">{"debug": "Large API payload can overflow without scroll handling."}</pre>
+    </article>
+  </body>
+</html>
