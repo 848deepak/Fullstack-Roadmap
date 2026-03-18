@@ -1,0 +1,8 @@
+{
+  "welcome": "Build fast with reusable React components",
+  "highlights": [
+    "Reusable architecture",
+    "Route-based navigation",
+    "Component testing with RTL"
+  ]
+}

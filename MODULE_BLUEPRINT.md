@@ -41,6 +41,16 @@ Each module README should include:
 - Keep naming conventions and folder organization consistent.
 - Add comments for both beginner understanding and advanced design rationale.
 
+## Folder Naming Standard
+
+- Top-level modules: `NN_Title_With_Underscores`.
+    - Example: `03_JavaScript`, `06_NextJS`, `15_CI_CD`.
+- Module blueprint subfolders: `NN_snake_case`.
+    - Example: `01_code_examples`, `05_advanced_deep_dive`.
+- Lesson/project subfolders can use `NN-kebab-case` for readability.
+    - Example: `08-state-management-patterns`.
+- Legacy naming exceptions should be listed and tracked in `FOLDER_NAMING_MIGRATION_PLAN.md`.
+
 ## Portfolio Readiness Standard
 
 Each mini project should contain:

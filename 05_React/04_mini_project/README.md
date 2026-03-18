@@ -2,9 +2,18 @@
 
 Content roadmap for 05_React.
 
-- [ ] Beginner
-- [ ] Intermediate
-- [ ] Advanced
+- [x] Beginner
+- [x] Intermediate
+- [x] Advanced
+
+## Added Project
+
+- [CRA Router Multi-Page App](cra-router-multipage-app/README.md)
+	- 5 pages: Login, Register, Home, Contact, About
+	- Home: 5 reusable components
+	- Contact: 3 reusable input components
+	- About: 4 reusable components
+	- RTL test suite with 15+ tested components/pages
 
 <!-- DOCS_UPGRADE_V2026_START -->
 ## Documentation Upgrade Layer

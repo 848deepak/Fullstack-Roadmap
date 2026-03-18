@@ -108,17 +108,21 @@ Each module now follows a consistent structure:
 - Include production concerns: logging, monitoring, scalability, security
 
 ## Legacy Tracks (Retained)
-- [01-javascript](01-javascript)
-- [02-react](02-react)
-- [03-bonus-industry-skills](03-bonus-industry-skills)
+- [22_Bonus_Industry_Skills](22_Bonus_Industry_Skills)
 
-These remain available for backward compatibility while the modular `00-21` path becomes the primary roadmap.
+The modular `00-21` path is the primary roadmap; the bonus module is canonical at `22_Bonus_Industry_Skills`.
+
+## Folder Naming Convention
+- Primary modules follow: `NN_Title_With_Underscores` (example: `05_React`, `15_CI_CD`).
+- Nested learning units may use hyphen-case where they are lesson slugs (example: `06-react-core-concepts`).
+- Legacy outliers are tracked in [FOLDER_NAMING_MIGRATION_PLAN.md](FOLDER_NAMING_MIGRATION_PLAN.md).
 
 ## Supporting Docs
 - [00-start-here-glossary.md](00-start-here-glossary.md)
 - [00-reference-index.md](00-reference-index.md)
 - [LEARNING_PATH.md](LEARNING_PATH.md)
 - [TOPIC_COVERAGE_MATRIX.md](TOPIC_COVERAGE_MATRIX.md)
+- [FOLDER_NAMING_MIGRATION_PLAN.md](FOLDER_NAMING_MIGRATION_PLAN.md)
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [GITHUB_PUBLISHING_GUIDE.md](GITHUB_PUBLISHING_GUIDE.md)
 
@@ -152,7 +156,7 @@ This repository is structured as a production-grade full-stack engineering knowl
 ### Repository Information Architecture
 - Primary path: `00` through `21` modules with standardized subfolders (`01_code_examples`, `02_practice_problems`, `03_interview_questions`, `04_mini_project`, `05_advanced_deep_dive`).
 - Supporting references: `LEARNING_PATH.md`, `TOPIC_COVERAGE_MATRIX.md`, `00-reference-index.md`, and `00-start-here-glossary.md`.
-- Legacy tracks remain preserved (`01-javascript`, `02-react`, `03-bonus-industry-skills`) for compatibility and parallel study.
+- Bonus module `22_Bonus_Industry_Skills` is canonical.
 
 ### Structured Learning Roadmap
 | Module | Stage | Entry |

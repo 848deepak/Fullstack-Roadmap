@@ -5,7 +5,7 @@ This file maps requested roadmap topics to actual repository modules/files.
 ## JavaScript Roadmap Coverage
 
 ### 1) JavaScript Basics ✅
-- ECMAScript + how JS works in browser: [01-javascript/02-language-fundamentals](01-javascript/02-language-fundamentals), [01-javascript/03-dom-and-browser](01-javascript/03-dom-and-browser)
+- ECMAScript + how JS works in browser: [03_JavaScript/02-language-fundamentals](03_JavaScript/02-language-fundamentals), [03_JavaScript/03-dom-and-browser](03_JavaScript/03-dom-and-browser)
 - Variables, data types, operators: `01-variables-data-types.js`, `02-operators-conditionals.js`
 - Type conversion, template literals, comments: `06-type-conversion-template-comments.js`
 
@@ -82,4 +82,4 @@ This file maps requested roadmap topics to actual repository modules/files.
 - folder structure/clean code/reusability/typescript/jwt/rbac/deployment: `16-production-level-skills/`
 
 ## Bonus Industry Skills ✅
-- TypeScript, Next.js, Vite/Webpack, GitHub, CI/CD, Docker: `03-bonus-industry-skills/`
+- TypeScript, Next.js, Vite/Webpack, GitHub, CI/CD, Docker: `22_Bonus_Industry_Skills/`

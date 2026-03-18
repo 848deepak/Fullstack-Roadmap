@@ -55,7 +55,7 @@ Each product card shows:
 
 ```
 fullstack/
-└── 01-javascript/
+└── 03_JavaScript/
    └── 01-product-filter-dashboard/
       ├── index.html      # Main HTML structure
       ├── style.css       # All styling and animations

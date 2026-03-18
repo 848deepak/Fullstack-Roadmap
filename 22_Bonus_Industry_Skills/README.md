@@ -1,8 +1,5 @@
 # Bonus Industry Skills
 
-> ⚠️ Legacy path notice: this folder is kept temporarily for backward compatibility.
-> Use the canonical module at [22_Bonus_Industry_Skills](../22_Bonus_Industry_Skills/README.md).
-
 ## Overview
 These topics improve real-world readiness beyond core JavaScript and React.
 
@@ -39,7 +36,7 @@ You should gain practical ecosystem awareness required for modern frontend/fulls
 ## Documentation Upgrade Layer
 
 ### Breadcrumb Navigation
-[Home](../README.md) > 03-bonus-industry-skills
+[Home](../README.md) > 22_Bonus_Industry_Skills
 
 ### Internal Contents
 - [Documentation Upgrade Layer](#documentation-upgrade-layer)
@@ -135,7 +132,7 @@ For every major concept in this module, analyze it through this lens:
 
 ### Folder Structure Diagram (Actual)
 ```text
-03-bonus-industry-skills/
+22_Bonus_Industry_Skills/
 ├── 00-reference.md
 ├── nextjs-roadmap.md
 ├── README.md
@@ -150,10 +147,10 @@ For every major concept in this module, analyze it through this lens:
 - [Production Architecture](../20_Production_Architecture/README.md): reliability, observability, and long-term operability principles.
 
 ### Code References in Repository
-- `03-bonus-industry-skills/00-reference.md`
-- `03-bonus-industry-skills/nextjs-roadmap.md`
-- `03-bonus-industry-skills/tooling-and-devops-roadmap.md`
-- `03-bonus-industry-skills/typescript-roadmap.md`
+- `22_Bonus_Industry_Skills/00-reference.md`
+- `22_Bonus_Industry_Skills/nextjs-roadmap.md`
+- `22_Bonus_Industry_Skills/tooling-and-devops-roadmap.md`
+- `22_Bonus_Industry_Skills/typescript-roadmap.md`
 
 ### Cross-Module Links
 - [Root Roadmap](../README.md)
